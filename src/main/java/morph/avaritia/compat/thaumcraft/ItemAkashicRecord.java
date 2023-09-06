@@ -10,15 +10,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
-import thaumcraft.api.ThaumcraftApi;
-import thaumcraft.api.capabilities.IPlayerKnowledge;
 import thaumcraft.api.research.ResearchCategories;
 import thaumcraft.api.research.ResearchCategory;
 import thaumcraft.api.research.ResearchEntry;
-import thaumcraft.common.config.ModConfig;
 import thaumcraft.common.lib.CommandThaumcraft;
 
 import java.util.Collection;

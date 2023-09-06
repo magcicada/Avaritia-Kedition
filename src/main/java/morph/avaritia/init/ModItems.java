@@ -5,7 +5,6 @@ import morph.avaritia.api.registration.IModelRegister;
 import morph.avaritia.compat.bloodmagic.ItemArmokOrb;
 import morph.avaritia.compat.thaumcraft.ItemAkashicRecord;
 import morph.avaritia.compat.thaumcraft.ItemBigPearl;
-import morph.avaritia.compat.thaumcraft.ItemCrystalCaster;
 import morph.avaritia.handler.ConfigHandler;
 import morph.avaritia.item.*;
 import morph.avaritia.item.tools.*;

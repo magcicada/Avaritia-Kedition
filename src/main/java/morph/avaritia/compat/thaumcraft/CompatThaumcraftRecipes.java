@@ -1,17 +1,12 @@
 package morph.avaritia.compat.thaumcraft;
 
 import morph.avaritia.Avaritia;
-import morph.avaritia.init.ModBlocks;
 import morph.avaritia.init.ModItems;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.common.eventhandler.EventPriority;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
-import thaumcraft.api.aspects.AspectEventProxy;
 import thaumcraft.api.aspects.AspectList;
-import thaumcraft.api.aspects.AspectRegistryEvent;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.items.ItemsTC;
 

@@ -6,7 +6,6 @@ import morph.avaritia.api.registration.IModelRegister;
 import morph.avaritia.client.gui.GUIHandler;
 import morph.avaritia.compat.bloodmagic.Bloody;
 import morph.avaritia.compat.thaumcraft.CompatThaumcraftAspects;
-import morph.avaritia.compat.thaumcraft.CompatThaumcraftRecipes;
 import morph.avaritia.compat.thaumcraft.CompatThaumcraftResearch;
 import morph.avaritia.entity.EntityEndestPearl;
 import morph.avaritia.entity.EntityGapingVoid;
