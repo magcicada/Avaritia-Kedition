@@ -105,6 +105,7 @@ public class ItemArmorInfinity extends ItemArmor implements IVisDiscountGear, IG
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         if (slot == EntityEquipmentSlot.FEET) {
             tooltip.add("");
