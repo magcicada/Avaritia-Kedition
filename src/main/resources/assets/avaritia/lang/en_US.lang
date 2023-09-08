@@ -70,6 +70,7 @@ tile.avaritia:extreme_crafting_table.name=Extreme Crafting Table
 tile.avaritia:block_resource.neutronium.name.name=Neutronium Block
 tile.avaritia:block_resource.infinity.name.name=Infinity Block
 tile.avaritia:block_resource.crystal_matrix.name.name=Crystal Matrix
+tile.avaritia.gaia_block.name=Gaia Block
 #
 # Machines
 tile.avaritia:neutron_collector.name=Neutron Collector

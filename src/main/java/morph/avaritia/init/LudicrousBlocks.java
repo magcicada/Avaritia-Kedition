@@ -26,6 +26,7 @@ public class LudicrousBlocks {
 
     public static BlockNeutronCollector neutron_collector;
     public static BlockNeutroniumCompressor neutronium_compressor;
+    public static Block gaia_block;
     public static BlockContainer infinitato;
     public static void init() {
         compressedCraftingTable = registerBlock(new BlockCompressedCraftingTable());

@@ -1,5 +1,6 @@
 package morph.avaritia.compat.botania;
 
+import morph.avaritia.Avaritia;
 import morph.avaritia.compat.Compat;
 import morph.avaritia.init.LudicrousItems;
 import morph.avaritia.recipe.ExtremeCraftingManager;
@@ -11,6 +12,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import vazkii.botania.api.BotaniaAPI;
+import vazkii.botania.api.recipe.RecipeRuneAltar;
 import vazkii.botania.common.block.ModBlocks;
 
 import static morph.avaritia.init.LudicrousBlocks.*;
@@ -19,6 +21,9 @@ public class Tsundere {
 
     public static void preInit() throws Compat.ItemNotFoundException {
 
+        gaia_block = registerBlock(new BlockGaia());
+        registerItemBlock(gaia_block);
+
         infinitato = registerBlock(new BlockInfinitato());
         registerItemBlock(infinitato);
         GameRegistry.registerTileEntity(TileInfinitato.class, "avaritia_infinitato");
@@ -26,6 +31,10 @@ public class Tsundere {
         BotaniaAPI.registerSubTile("asgardandelion", SubTileAsgardandelion.class);
         BotaniaAPI.registerSubTileSignature(SubTileAsgardandelion.class, new Signature("asgardandelion"));
         BotaniaAPI.addSubTileToCreativeMenu("asgardandelion");
+
+        BotaniaAPI.registerSubTile("soarleander", SubTileSoarleander.class);
+        BotaniaAPI.registerSubTileSignature(SubTileSoarleander.class, new Signature("soarleander"));
+        BotaniaAPI.addSubTileToCreativeMenu("soarleander");
     }
 
     public static void init() throws Compat.ItemNotFoundException{
@@ -49,6 +58,28 @@ public class Tsundere {
                 'X', new ItemStack(LudicrousItems.resource, 1, 5),
                 'N', new ItemStack(LudicrousItems.resource, 1, 4),
                 'n', new ItemStack(LudicrousItems.resource, 1, 3));
+
+        ItemStack chicken = getFlower("soarleander");
+        BotaniaAPI.registerRuneAltarRecipe(
+                chicken, 8000, getFlower("gourmaryllis"),
+                new ItemStack(Items.CHICKEN), new ItemStack(Items.CHICKEN),
+                new ItemStack(Items.CHICKEN), new ItemStack(Items.CHICKEN),
+                new ItemStack(Items.CHICKEN), new ItemStack(Items.CHICKEN),
+                new ItemStack(Items.CHICKEN), new ItemStack(Items.CHICKEN)
+        );
+        SubTileSoarleander.lexicon = new LudicrousLexicon("soarleander", BotaniaAPI.categoryGenerationFlowers);
+        SubTileSoarleander.lexicon.addPage(BotaniaAPI.internalHandler.textPage("avaritia.lexicon.soarleander.0"));
+        SubTileSoarleander.lexicon.setIcon(chicken);
+        SubTileSoarleander.lexicon.setLexiconPages(
+                BotaniaAPI.internalHandler.textPage(Avaritia.MOD_ID + ".lexicon.soarleander.0"),
+                BotaniaAPI.internalHandler.runeRecipePage(Avaritia.MOD_ID + ".lexicon.soarleander.1", new RecipeRuneAltar(
+                        chicken, 8000, getFlower("gourmaryllis"),
+                        new ItemStack(Items.CHICKEN), new ItemStack(Items.CHICKEN),
+                        new ItemStack(Items.CHICKEN), new ItemStack(Items.CHICKEN),
+                        new ItemStack(Items.CHICKEN), new ItemStack(Items.CHICKEN),
+                        new ItemStack(Items.CHICKEN), new ItemStack(Items.CHICKEN)
+                ))
+        );
 
         Block potato = ModBlocks.tinyPotato;
 

@@ -10,14 +10,17 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import vazkii.botania.api.BotaniaAPIClient;
 
+import static morph.avaritia.init.LudicrousBlocks.gaia_block;
 import static morph.avaritia.init.LudicrousBlocks.infinitato;
 
 public class CompatClient {
 
 	public static void earlyComprettify() {
 		if (Compat.botan) {
+			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(gaia_block), 0, new ModelResourceLocation(gaia_block.getRegistryName(), "inventory"));
 			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(infinitato), 0, new ModelResourceLocation(infinitato.getRegistryName(), "facing=north"));
 			BotaniaAPIClient.registerSubtileModel("asgardandelion", new ModelResourceLocation("botania:" + "asgardandelion"));
+			BotaniaAPIClient.registerSubtileModel("soarleander", new ModelResourceLocation("botania:" + "soarleander"));
 			MinecraftForge.EVENT_BUS.register(MiscellaneousIcons.INSTANCE);
 		}
 	}
