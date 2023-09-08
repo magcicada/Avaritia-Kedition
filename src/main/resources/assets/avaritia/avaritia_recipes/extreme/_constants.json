@@ -216,10 +216,11 @@
 		}
 	},
 	{
-		"name": "extremely_primordial_pearl",
+		"name": "clay_singularity",
 		"ingredient": {
 			"type": "minecraft:item",
-			"item": "avaritia:extremely_primordial_pearl"
+			"item": "avaritia:singularity",
+			"data": 10
 		}
 	}
 ]

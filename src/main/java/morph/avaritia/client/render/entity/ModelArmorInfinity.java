@@ -5,7 +5,7 @@ import codechicken.lib.texture.TextureUtils;
 import morph.avaritia.client.ColourHelper;
 import morph.avaritia.client.render.shader.CosmicShaderHelper;
 import morph.avaritia.init.AvaritiaTextures;
-import morph.avaritia.init.ModItems;
+import morph.avaritia.init.LudicrousItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelRenderer;
@@ -230,10 +230,10 @@ public class ModelArmorInfinity extends ModelBiped {
         ItemStack leg = entityLiving.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
         ItemStack foot = entityLiving.getItemStackFromSlot(EntityEquipmentSlot.FEET);
 
-        boolean hasHat = hat != null && hat.getItem() == ModItems.infinity_helmet; //&& !((ItemArmorInfinity) (ModItems.infinity_helmet)).hasPhantomInk(hat);
-        boolean hasChest = chest != null && chest.getItem() == ModItems.infinity_chestplate; // && !((ItemArmorInfinity) (ModItems.infinity_chestplate)).hasPhantomInk(chest);
-        boolean hasLeg = leg != null && leg.getItem() == ModItems.infinity_pants; // && !((ItemArmorInfinity) (ModItems.infinity_pants)).hasPhantomInk(leg);
-        boolean hasFoot = foot != null && foot.getItem() == ModItems.infinity_boots; // && !((ItemArmorInfinity) (ModItems.infinity_boots)).hasPhantomInk(foot);
+        boolean hasHat = hat != null && hat.getItem() == LudicrousItems.infinity_helmet; //&& !((ItemArmorInfinity) (ModItems.infinity_helmet)).hasPhantomInk(hat);
+        boolean hasChest = chest != null && chest.getItem() == LudicrousItems.infinity_chestplate; // && !((ItemArmorInfinity) (ModItems.infinity_chestplate)).hasPhantomInk(chest);
+        boolean hasLeg = leg != null && leg.getItem() == LudicrousItems.infinity_pants; // && !((ItemArmorInfinity) (ModItems.infinity_pants)).hasPhantomInk(leg);
+        boolean hasFoot = foot != null && foot.getItem() == LudicrousItems.infinity_boots; // && !((ItemArmorInfinity) (ModItems.infinity_boots)).hasPhantomInk(foot);
 
         if (armorSlot == EntityEquipmentSlot.HEAD) {//TODO, Wot.
             if (hasHat && hasChest && hasLeg && hasFoot) {

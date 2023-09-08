@@ -4,7 +4,7 @@ import codechicken.lib.util.ItemUtils;
 import morph.avaritia.Avaritia;
 import morph.avaritia.entity.EntityImmortalItem;
 import morph.avaritia.handler.AvaritiaEventHandler;
-import morph.avaritia.init.ModItems;
+import morph.avaritia.init.LudicrousItems;
 import morph.avaritia.item.ItemMatterCluster;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirt;
@@ -186,7 +186,7 @@ public class ItemHoeInfinity extends ItemHoe {
 
     @Override
     public EnumRarity getRarity(ItemStack stack) {
-        return ModItems.COSMIC_RARITY;
+        return LudicrousItems.COSMIC_RARITY;
     }
 
     @Override

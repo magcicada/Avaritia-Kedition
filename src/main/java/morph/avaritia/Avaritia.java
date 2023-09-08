@@ -2,10 +2,10 @@ package morph.avaritia;
 
 import codechicken.lib.CodeChickenLib;
 import codechicken.lib.gui.SimpleCreativeTab;
-import morph.avaritia.compat.thaumcraft.CompatThaumcraftRecipes;
+import morph.avaritia.compat.Compat;
 import morph.avaritia.init.FoodRecipes;
-import morph.avaritia.init.ModBlocks;
-import morph.avaritia.init.ModItems;
+import morph.avaritia.init.LudicrousBlocks;
+import morph.avaritia.init.LudicrousItems;
 import morph.avaritia.proxy.Proxy;
 import morph.avaritia.recipe.AvaritiaRecipeManager;
 import morph.avaritia.util.CompressorBalanceCalculator;
@@ -15,7 +15,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -30,7 +29,7 @@ import static morph.avaritia.Avaritia.*;
         name = MOD_NAME,
         version = MOD_VERSION,
         acceptedMinecraftVersions = CodeChickenLib.MC_VERSION_DEP,
-        dependencies = DEPENDENCIES + "required-after:thaumcraft;required-after:bloodmagic")
+        dependencies = DEPENDENCIES + "after:thaumcraft;after:bloodmagic;after:botania")
 public class Avaritia {
 
     public static final String MOD_ID = "avaritia";
@@ -49,15 +48,16 @@ public class Avaritia {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(this);
+        Compat.census();
         proxy.preInit(event);
         OreDictionary.registerOre("blockWool", new ItemStack(Blocks.WOOL, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("blockCrystalMatrix", new ItemStack(ModBlocks.resource, 1, 2));
-        OreDictionary.registerOre("blockCosmicNeutronium", new ItemStack(ModBlocks.resource, 1, 0));
-        OreDictionary.registerOre("blockInfinity", new ItemStack(ModBlocks.resource, 1, 1));
-        OreDictionary.registerOre("ingotCrystalMatrix", ModItems.crystal_matrix_ingot);
-        OreDictionary.registerOre("ingotCosmicNeutronium", ModItems.neutronium_ingot);
-        OreDictionary.registerOre("ingotInfinity", ModItems.infinity_ingot);
-        OreDictionary.registerOre("nuggetCosmicNeutronium", ModItems.neutron_nugget);
+        OreDictionary.registerOre("blockCrystalMatrix", new ItemStack(LudicrousBlocks.resource, 1, 2));
+        OreDictionary.registerOre("blockCosmicNeutronium", new ItemStack(LudicrousBlocks.resource, 1, 0));
+        OreDictionary.registerOre("blockInfinity", new ItemStack(LudicrousBlocks.resource, 1, 1));
+        OreDictionary.registerOre("ingotCrystalMatrix", LudicrousItems.crystal_matrix_ingot);
+        OreDictionary.registerOre("ingotCosmicNeutronium", LudicrousItems.neutronium_ingot);
+        OreDictionary.registerOre("ingotInfinity", LudicrousItems.infinity_ingot);
+        OreDictionary.registerOre("nuggetCosmicNeutronium", LudicrousItems.neutron_nugget);
     }
 
     @Mod.EventHandler
@@ -75,7 +75,5 @@ public class Avaritia {
         CompressorBalanceCalculator.gatherBalanceModifier();
         AvaritiaRecipeManager.init();
         FoodRecipes.initFoodRecipes();
-        if(Loader.isModLoaded("thaumcraft"))
-            CompatThaumcraftRecipes.initThaumcraftRecipe();
     }
 }

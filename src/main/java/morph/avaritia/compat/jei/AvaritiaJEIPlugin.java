@@ -10,7 +10,7 @@ import morph.avaritia.compat.jei.compressor.CompressorRecipeWrapper;
 import morph.avaritia.compat.jei.extreme.ExtremeCraftingCategory;
 import morph.avaritia.compat.jei.extreme.ExtremeRecipeWrapper;
 import morph.avaritia.container.ContainerExtremeCrafting;
-import morph.avaritia.init.ModBlocks;
+import morph.avaritia.init.LudicrousBlocks;
 import morph.avaritia.recipe.AvaritiaRecipeManager;
 import morph.avaritia.recipe.compressor.ICompressorRecipe;
 import morph.avaritia.recipe.extreme.ExtremeShapedRecipe;
@@ -46,14 +46,14 @@ public class AvaritiaJEIPlugin implements IModPlugin {
         registry.addRecipes(AvaritiaRecipeManager.EXTREME_RECIPES.values(), EXTREME_CRAFTING);
         registry.handleRecipes(ExtremeShapedRecipe.class, ExtremeRecipeWrapper::new, EXTREME_CRAFTING);
         registry.handleRecipes(ExtremeShapelessRecipe.class, ExtremeRecipeWrapper::new, EXTREME_CRAFTING);
-        registry.addRecipeCatalyst(new ItemStack(ModBlocks.extremeCraftingTable), EXTREME_CRAFTING);
+        registry.addRecipeCatalyst(new ItemStack(LudicrousBlocks.extremeCraftingTable), EXTREME_CRAFTING);
         registry.getRecipeTransferRegistry().addRecipeTransferHandler(ContainerExtremeCrafting.class, EXTREME_CRAFTING, 1, 81, 82, 36);
         registry.addRecipeClickArea(GUIExtremeCrafting.class, 175, 79, 28, 26, EXTREME_CRAFTING);
 
         registry.addRecipes(AvaritiaRecipeManager.COMPRESSOR_RECIPES.values(), NEUTRONIUM_COMPRESSOR);
         registry.handleRecipes(ICompressorRecipe.class, CompressorRecipeWrapper::new, NEUTRONIUM_COMPRESSOR);
         registry.addRecipeClickArea(GUINeutroniumCompressor.class, 62, 35, 22, 15, NEUTRONIUM_COMPRESSOR);
-        registry.addRecipeCatalyst(new ItemStack(ModBlocks.neutronium_compressor), NEUTRONIUM_COMPRESSOR);
+        registry.addRecipeCatalyst(new ItemStack(LudicrousBlocks.neutronium_compressor), NEUTRONIUM_COMPRESSOR);
     }
 
     private static void setupDrawables(IGuiHelper helper) {

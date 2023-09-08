@@ -4,7 +4,7 @@ import com.google.common.collect.Collections2;
 import com.google.common.collect.Lists;
 import morph.avaritia.Avaritia;
 import morph.avaritia.client.render.entity.ModelArmorInfinity;
-import morph.avaritia.init.ModItems;
+import morph.avaritia.init.LudicrousItems;
 import morph.avaritia.util.ModHelper;
 import morph.avaritia.util.TextUtils;
 import net.minecraft.client.model.ModelBiped;
@@ -91,7 +91,7 @@ public class ItemArmorInfinity extends ItemArmor implements IVisDiscountGear, IG
 
     @Override
     public EnumRarity getRarity(ItemStack stack) {
-        return ModItems.COSMIC_RARITY;
+        return LudicrousItems.COSMIC_RARITY;
     }
 
     @Override

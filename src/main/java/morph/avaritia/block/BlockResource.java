@@ -2,7 +2,7 @@ package morph.avaritia.block;
 
 import morph.avaritia.Avaritia;
 import morph.avaritia.api.registration.IModelRegister;
-import morph.avaritia.init.ModBlocks;
+import morph.avaritia.init.LudicrousBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -83,7 +83,7 @@ public class BlockResource extends Block implements IModelRegister {
     @Override
     @SideOnly (Side.CLIENT)
     public void registerModels() {
-        ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.resource), stack -> new ModelResourceLocation("avaritia:block_resource", "type=" + BlockResource.Type.byMetadata(stack.getMetadata()).getName()));
+        ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(LudicrousBlocks.resource), stack -> new ModelResourceLocation("avaritia:block_resource", "type=" + BlockResource.Type.byMetadata(stack.getMetadata()).getName()));
     }
 
     public static enum Type implements IStringSerializable {

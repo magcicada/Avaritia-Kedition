@@ -3,7 +3,7 @@ package morph.avaritia.item;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import morph.avaritia.Avaritia;
-import morph.avaritia.init.ModItems;
+import morph.avaritia.init.LudicrousItems;
 import morph.avaritia.util.ItemStackWrapper;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
@@ -84,7 +84,7 @@ public class ItemFracturedOre extends Item {
     public static void parseOreDictionary() {
         String[] names = OreDictionary.getOreNames();
 
-        ItemFracturedOre fracore = ModItems.fractured_ore;
+        ItemFracturedOre fracore = LudicrousItems.fractured_ore;
 
         Multimap<String, ItemStack> toRegister = HashMultimap.create();
         Set<ItemStackWrapper> antiDupePool = new HashSet<>();

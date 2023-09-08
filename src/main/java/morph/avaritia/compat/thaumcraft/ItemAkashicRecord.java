@@ -2,7 +2,7 @@ package morph.avaritia.compat.thaumcraft;
 
 import morph.avaritia.Avaritia;
 import morph.avaritia.api.registration.IModelRegister;
-import morph.avaritia.init.ModItems;
+import morph.avaritia.init.LudicrousItems;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
@@ -52,7 +52,7 @@ public class ItemAkashicRecord extends Item implements IModelRegister {
     @Override
     public void registerModels() {
         ModelResourceLocation curio = new ModelResourceLocation("avaritia:resource", "type=akashic_record");
-        ModelLoader.registerItemVariants(ModItems.akashic_record, curio);
-        ModelLoader.setCustomMeshDefinition(ModItems.akashic_record, (ItemStack stack) -> curio);
+        ModelLoader.registerItemVariants(LudicrousItems.akashic_record, curio);
+        ModelLoader.setCustomMeshDefinition(LudicrousItems.akashic_record, (ItemStack stack) -> curio);
     }
 }

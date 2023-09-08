@@ -56,7 +56,7 @@
 			],
 			"pass": {
 				"type": "minecraft:item",
-				"item": "#extremely_primordial_pearl"
+				"item": "avaritia:extremely_primordial_pearl"
 			}
 		},
 		{
@@ -182,6 +182,23 @@
 			"pass": {
 				"type": "minecraft:item",
 				"item": "#nickel_singularity"
+			}
+		},
+		{
+			"type": "codechickenlib:conditional",
+			"conditions": [
+				{
+					"type": "avaritia:mod_exists",
+					"mod": "botania"
+				},
+				{
+					"type": "avaritia:config",
+					"tag": "materials.clay"
+				}
+			],
+			"pass": {
+				"type": "minecraft:item",
+				"item": "#clay_singularity"
 			}
 		},
 		{

@@ -64,6 +64,7 @@ dependencies {
     compile 'curse.maven:thaumcraft-223628:2629023'
     compile 'curse.maven:baubles-227083:2518667'
     compile 'curse.maven:blood-magic-224791:2822288'
+    compile 'curse.maven:botania-225643:3330934'
 	/*OTHERS*/
     //compile "com.wayoftime.bloodmagic:BloodMagic:${config.mc_version}-${config.blood_magic_version}"
     //compile "slimeknights:TConstruct:${config.mc_version}-${config.tinkers_version}"

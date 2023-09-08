@@ -10,7 +10,7 @@ public class ExtremeCraftingManager {
 	
 	public static void addRecipe(ItemStack result, Object...objects) {
 		Object[] list = new Object[objects.length + 1];
-		list[0] = (Object) false;
+		list[0] = false;
 		System.arraycopy(objects, 0, list, 1, objects.length);
 		
 		ShapedPrimer primer = CraftingHelper.parseShaped(list);

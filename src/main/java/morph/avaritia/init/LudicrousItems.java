@@ -2,9 +2,6 @@ package morph.avaritia.init;
 
 import morph.avaritia.Avaritia;
 import morph.avaritia.api.registration.IModelRegister;
-import morph.avaritia.compat.bloodmagic.ItemArmokOrb;
-import morph.avaritia.compat.thaumcraft.ItemAkashicRecord;
-import morph.avaritia.compat.thaumcraft.ItemBigPearl;
 import morph.avaritia.handler.ConfigHandler;
 import morph.avaritia.item.*;
 import morph.avaritia.item.tools.*;
@@ -17,7 +14,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 
@@ -26,7 +22,7 @@ import java.util.function.Consumer;
 /**
  * Created by covers1624 on 11/04/2017.
  */
-public class ModItems {
+public class LudicrousItems {
 
     public static EnumRarity COSMIC_RARITY = EnumHelper.addRarity("COSMIC", TextFormatting.RED, "Cosmic");
 
@@ -96,7 +92,6 @@ public class ModItems {
     public static Item crystal_studded_cosmic_neutronium_caster;
 
     public static Item armok_orb;
-
     public static void init() {
 
         resource = registerItem(new ItemResource(Avaritia.tab, "resource"));
@@ -128,8 +123,7 @@ public class ModItems {
         leadSingularity = singularity.registerItem("lead");
         silverSingularity = singularity.registerItem("silver");
         nickelSingularity = singularity.registerItem("nickel");
-
-      //  claySingularity = singularity.registerItem("clay");
+        claySingularity = singularity.registerItem("clay");
 
         infinity_sword = registerItem(new ItemSwordInfinity());
 
@@ -176,15 +170,7 @@ public class ModItems {
             ItemFracturedOre.parseOreDictionary();
         }
 
-        if(Loader.isModLoaded("thaumcraft")){
-            extremely_primordial_pearl = registerItem(new ItemBigPearl());
-            akashic_record = registerItem(new ItemAkashicRecord());
-        }
         matter_cluster = registerItem(new ItemMatterCluster());
-
-        if(Loader.isModLoaded("bloodmagic")){
-            armok_orb = registerItem(new ItemArmokOrb());
-        }
     }
 
     public static <V extends Item> V registerItem(V item) {

@@ -9,7 +9,7 @@ import morph.avaritia.client.render.item.CosmicItemRender;
 import morph.avaritia.entity.EntityImmortalItem;
 import morph.avaritia.handler.AvaritiaEventHandler;
 import morph.avaritia.init.AvaritiaTextures;
-import morph.avaritia.init.ModItems;
+import morph.avaritia.init.LudicrousItems;
 import morph.avaritia.util.DamageSourceInfinitySword;
 import net.minecraft.client.renderer.block.model.IBakedModel;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -52,7 +52,7 @@ public class ItemSwordInfinity extends ItemSword implements ICosmicRenderItem, I
                 victim.attackEntityFrom(new DamageSourceInfinitySword(player).setDamageBypassesArmor(), 4.0F);
                 return true;
             }
-            if (pvp.getHeldItem(EnumHand.MAIN_HAND) != null && pvp.getHeldItem(EnumHand.MAIN_HAND).getItem() == ModItems.infinity_sword && pvp.isHandActive()) {
+            if (pvp.getHeldItem(EnumHand.MAIN_HAND) != null && pvp.getHeldItem(EnumHand.MAIN_HAND).getItem() == LudicrousItems.infinity_sword && pvp.isHandActive()) {
                 return true;
             }
         }
@@ -82,7 +82,7 @@ public class ItemSwordInfinity extends ItemSword implements ICosmicRenderItem, I
 
     @Override
     public EnumRarity getRarity(ItemStack stack) {
-        return ModItems.COSMIC_RARITY;
+        return LudicrousItems.COSMIC_RARITY;
     }
 
     @Override
@@ -144,9 +144,9 @@ public class ItemSwordInfinity extends ItemSword implements ICosmicRenderItem, I
     @SideOnly (Side.CLIENT)
     public void registerModels() {
         ModelResourceLocation sword = new ModelResourceLocation("avaritia:tools", "type=infinity_sword");
-        ModelLoader.registerItemVariants(ModItems.infinity_pickaxe, sword);
+        ModelLoader.registerItemVariants(LudicrousItems.infinity_pickaxe, sword);
         IBakedModel wrapped = new CosmicItemRender(TransformUtils.DEFAULT_TOOL, modelRegistry -> modelRegistry.getObject(sword));
         ModelRegistryHelper.register(sword, wrapped);
-        ModelLoader.setCustomMeshDefinition(ModItems.infinity_sword, (ItemStack stack) -> sword);
+        ModelLoader.setCustomMeshDefinition(LudicrousItems.infinity_sword, (ItemStack stack) -> sword);
     }
 }

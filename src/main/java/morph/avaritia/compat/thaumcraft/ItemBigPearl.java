@@ -2,7 +2,7 @@ package morph.avaritia.compat.thaumcraft;
 
 import morph.avaritia.Avaritia;
 import morph.avaritia.api.registration.IModelRegister;
-import morph.avaritia.init.ModItems;
+import morph.avaritia.init.LudicrousItems;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
@@ -30,7 +30,7 @@ public class ItemBigPearl extends Item implements IModelRegister {
     @SideOnly (Side.CLIENT)
     public void registerModels() {
         ModelResourceLocation pearl = new ModelResourceLocation("avaritia:resource", "type=extremely_primordial_pearl");
-        ModelLoader.registerItemVariants(ModItems.extremely_primordial_pearl, pearl);
-        ModelLoader.setCustomMeshDefinition(ModItems.extremely_primordial_pearl, (ItemStack stack) -> pearl);
+        ModelLoader.registerItemVariants(LudicrousItems.extremely_primordial_pearl, pearl);
+        ModelLoader.setCustomMeshDefinition(LudicrousItems.extremely_primordial_pearl, (ItemStack stack) -> pearl);
     }
 }

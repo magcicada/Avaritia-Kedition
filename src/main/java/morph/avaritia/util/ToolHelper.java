@@ -10,7 +10,7 @@ package morph.avaritia.util;
 import codechicken.lib.util.ItemUtils;
 import com.google.common.collect.Sets;
 import morph.avaritia.handler.AvaritiaEventHandler;
-import morph.avaritia.init.ModItems;
+import morph.avaritia.init.LudicrousItems;
 import morph.avaritia.item.ItemMatterCluster;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -72,7 +72,7 @@ public class ToolHelper {
                 return;
             }
             Material material = state.getMaterial();
-            if (block == Blocks.GRASS && stack.getItem() == ModItems.infinity_axe) {
+            if (block == Blocks.GRASS && stack.getItem() == LudicrousItems.infinity_axe) {
                 world.setBlockState(pos, Blocks.DIRT.getDefaultState());
             }
             if (!block.canHarvestBlock(world, pos, player) || !validMaterials.contains(material)) {

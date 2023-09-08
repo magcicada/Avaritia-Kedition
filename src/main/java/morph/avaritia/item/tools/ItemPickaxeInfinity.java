@@ -6,7 +6,7 @@ import com.google.common.collect.Sets;
 import morph.avaritia.Avaritia;
 import morph.avaritia.entity.EntityImmortalItem;
 import morph.avaritia.handler.AvaritiaEventHandler;
-import morph.avaritia.init.ModItems;
+import morph.avaritia.init.LudicrousItems;
 import morph.avaritia.util.ToolHelper;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -62,7 +62,7 @@ public class ItemPickaxeInfinity extends ItemPickaxe {
 
     @Override
     public EnumRarity getRarity(ItemStack stack) {
-        return ModItems.COSMIC_RARITY;
+        return LudicrousItems.COSMIC_RARITY;
     }
 
     @Override

@@ -3,7 +3,7 @@ package morph.avaritia.tile;
 import codechicken.lib.packet.PacketCustom;
 import codechicken.lib.util.BlockUtils;
 import codechicken.lib.util.ItemUtils;
-import morph.avaritia.init.ModItems;
+import morph.avaritia.init.LudicrousItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -26,8 +26,8 @@ public class TileNeutronCollector extends TileMachineBase implements IInventory 
     public void doWork() {
         if (++progress >= PRODUCTION_TICKS) {
             if (neutrons.isEmpty()) {
-                neutrons = ItemUtils.copyStack(ModItems.neutron_pile, 1);
-            } else if (ItemUtils.areStacksSameType(neutrons, ModItems.neutron_pile)) {
+                neutrons = ItemUtils.copyStack(LudicrousItems.neutron_pile, 1);
+            } else if (ItemUtils.areStacksSameType(neutrons, LudicrousItems.neutron_pile)) {
                 if (neutrons.getCount() < 64) {
                     neutrons.grow(1);
                 }
