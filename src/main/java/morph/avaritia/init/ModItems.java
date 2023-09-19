@@ -22,7 +22,7 @@ import java.util.function.Consumer;
 /**
  * Created by covers1624 on 11/04/2017.
  */
-public class LudicrousItems {
+public class ModItems {
 
     public static EnumRarity COSMIC_RARITY = EnumHelper.addRarity("COSMIC", TextFormatting.RED, "Cosmic");
 

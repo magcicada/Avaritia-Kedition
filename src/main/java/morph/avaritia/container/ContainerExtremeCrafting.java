@@ -1,6 +1,6 @@
 package morph.avaritia.container;
 
-import morph.avaritia.init.LudicrousBlocks;
+import morph.avaritia.init.ModBlocks;
 import morph.avaritia.recipe.AvaritiaRecipeManager;
 import morph.avaritia.recipe.extreme.InventoryExtremeCraftResult;
 import morph.avaritia.recipe.extreme.InventoryExtremeCrafting;
@@ -66,7 +66,7 @@ public class ContainerExtremeCrafting extends Container {
 
     @Override
     public boolean canInteractWith(EntityPlayer player) {
-        return worldObj.getBlockState(pos) == LudicrousBlocks.extremeCraftingTable.getDefaultState() && player.getDistanceSq(pos) <= 64.0D;
+        return worldObj.getBlockState(pos) == ModBlocks.extremeCraftingTable.getDefaultState() && player.getDistanceSq(pos) <= 64.0D;
     }
 
     @Override

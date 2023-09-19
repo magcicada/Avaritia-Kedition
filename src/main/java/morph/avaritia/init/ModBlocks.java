@@ -16,7 +16,7 @@ import net.minecraftforge.registries.IForgeRegistryEntry;
 
 import java.util.function.Consumer;
 
-public class LudicrousBlocks {
+public class ModBlocks {
 
     public static BlockCompressedCraftingTable compressedCraftingTable;
     public static BlockDoubleCompressedCraftingTable doubleCompressedCraftingTable;

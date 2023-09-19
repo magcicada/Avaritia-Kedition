@@ -1,7 +1,7 @@
 package morph.avaritia.item;
 
 import codechicken.lib.util.ItemUtils;
-import morph.avaritia.init.LudicrousItems;
+import morph.avaritia.init.ModItems;
 import morph.avaritia.util.ItemStackWrapper;
 import morph.avaritia.util.ToolHelper;
 import net.minecraft.client.gui.GuiScreen;
@@ -42,7 +42,7 @@ public class ItemMatterCluster extends Item {
 
     @Override
     public EnumRarity getRarity(ItemStack stack) {
-        return LudicrousItems.COSMIC_RARITY;
+        return ModItems.COSMIC_RARITY;
     }
 
     @SuppressWarnings ({ "unchecked", "rawtypes" })
@@ -119,7 +119,7 @@ public class ItemMatterCluster extends Item {
     }
 
     public static ItemStack makeCluster(Map<ItemStackWrapper, Integer> input) {
-        ItemStack cluster = new ItemStack(LudicrousItems.matter_cluster);
+        ItemStack cluster = new ItemStack(ModItems.matter_cluster);
         int total = 0;
         for (int num : input.values()) {
             total += num;

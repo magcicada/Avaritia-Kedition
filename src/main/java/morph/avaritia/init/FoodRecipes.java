@@ -80,7 +80,7 @@ public class FoodRecipes {
                 ings.add(Ingredient.fromStacks(new ItemStack(Blocks.BROWN_MUSHROOM)));
                 NonNullList<Ingredient> n_ings = NonNullList.create();
                 n_ings.addAll(ings);
-                IExtremeRecipe recipe = new ExtremeShapelessRecipe(n_ings, new ItemStack(LudicrousItems.ultimate_stew, 1));
+                IExtremeRecipe recipe = new ExtremeShapelessRecipe(n_ings, new ItemStack(ModItems.ultimate_stew, 1));
                 recipe.setRegistryName(new ResourceLocation("avaritia", "ultimate_stew"));
                 AvaritiaRecipeManager.EXTREME_RECIPES.put(recipe.getRegistryName(), recipe);
             }
@@ -98,7 +98,7 @@ public class FoodRecipes {
                 ings.add(Ingredient.fromItem(Items.FISH));
                 NonNullList<Ingredient> n_ings = NonNullList.create();
                 n_ings.addAll(ings);
-                IExtremeRecipe recipe = new ExtremeShapelessRecipe(n_ings, new ItemStack(LudicrousItems.cosmic_meatballs, 1));
+                IExtremeRecipe recipe = new ExtremeShapelessRecipe(n_ings, new ItemStack(ModItems.cosmic_meatballs, 1));
                 recipe.setRegistryName(new ResourceLocation("avaritia", "cosmic_meatballs"));
                 AvaritiaRecipeManager.EXTREME_RECIPES.put(recipe.getRegistryName(), recipe);
             }
@@ -195,13 +195,13 @@ public class FoodRecipes {
         // time to actually MAKE the damn thing...
 
         NonNullList<Ingredient> stewInputs = NonNullList.create();
-        stewInputs.add(Ingredient.fromStacks(LudicrousItems.neutron_pile));
+        stewInputs.add(Ingredient.fromStacks(ModItems.neutron_pile));
         for (String crop : crops) {
             for (int j = 0; j < cropmultiplier; j++) {
                 stewInputs.add(new OreIngredient(crop));
             }
         }
-        IExtremeRecipe stew_recipe = new ExtremeShapelessRecipe(stewInputs, new ItemStack(LudicrousItems.ultimate_stew, makesstew));
+        IExtremeRecipe stew_recipe = new ExtremeShapelessRecipe(stewInputs, new ItemStack(ModItems.ultimate_stew, makesstew));
         stew_recipe.setRegistryName(new ResourceLocation("avaritia", "ultimate_stew"));
         AvaritiaRecipeManager.EXTREME_RECIPES.put(stew_recipe.getRegistryName(), stew_recipe);
 
@@ -272,7 +272,7 @@ public class FoodRecipes {
         // time to actually MAKE the damn thing...
 
         NonNullList<Ingredient> meatballInputs = NonNullList.create();
-        meatballInputs.add(Ingredient.fromStacks(LudicrousItems.neutron_pile));
+        meatballInputs.add(Ingredient.fromStacks(ModItems.neutron_pile));
         for (ItemStack knownMeat : knownMeats) {
             for (int j = 0; j < meatmultiplier; j++) {
                 meatballInputs.add(Ingredient.fromStacks(knownMeat));
@@ -284,7 +284,7 @@ public class FoodRecipes {
                 meatballInputs.add(new OreIngredient(meat));
             }
         }
-        IExtremeRecipe metaball_recipe = new ExtremeShapelessRecipe(meatballInputs, new ItemStack(LudicrousItems.cosmic_meatballs, makesmeatballs));
+        IExtremeRecipe metaball_recipe = new ExtremeShapelessRecipe(meatballInputs, new ItemStack(ModItems.cosmic_meatballs, makesmeatballs));
         metaball_recipe.setRegistryName(new ResourceLocation("avaritia", "cosmic_meatballs"));
         AvaritiaRecipeManager.EXTREME_RECIPES.put(metaball_recipe.getRegistryName(), metaball_recipe);
     }

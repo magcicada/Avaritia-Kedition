@@ -16,8 +16,8 @@ import morph.avaritia.entity.EntityHeavenSubArrow;
 import morph.avaritia.handler.AbilityHandler;
 import morph.avaritia.handler.AvaritiaEventHandler;
 import morph.avaritia.handler.ConfigHandler;
-import morph.avaritia.init.LudicrousBlocks;
-import morph.avaritia.init.LudicrousItems;
+import morph.avaritia.init.ModBlocks;
+import morph.avaritia.init.ModItems;
 import morph.avaritia.recipe.ExtremeCraftingManager;
 import morph.avaritia.util.Lumberjack;
 import net.minecraft.block.Block;
@@ -46,8 +46,8 @@ public class Proxy {
 
     public void preInit(FMLPreInitializationEvent event) {
         ConfigHandler.init(event.getSuggestedConfigurationFile());
-        LudicrousItems.init();
-        LudicrousBlocks.init();
+        ModItems.init();
+        ModBlocks.init();
         NetworkRegistry.INSTANCE.registerGuiHandler(Avaritia.instance, new GUIHandler());
         MinecraftForge.EVENT_BUS.register(new AbilityHandler());
         MinecraftForge.EVENT_BUS.register(new AvaritiaEventHandler());
@@ -137,10 +137,10 @@ public class Proxy {
                         "IERRRRREI",
                         "IEEEREEEI",
                         "IIIIRIIII",
-                        'X', new ItemStack(LudicrousBlocks.resource, 1, 1),
+                        'X', new ItemStack(ModBlocks.resource, 1, 1),
                         'E', "blockEnderium",
-                        'I', new ItemStack(LudicrousItems.resource, 1, 6),
-                        'R', new ItemStack(LudicrousItems.singularity, 1, 3));
+                        'I', new ItemStack(ModItems.resource, 1, 6),
+                        'R', new ItemStack(ModItems.singularity, 1, 3));
             }
             catch (Throwable e){
                 Lumberjack.log(Level.INFO, e, "Avaritia forgot one of Thermal Expansion's 500 prerequisites.");
@@ -167,7 +167,7 @@ public class Proxy {
                         "IIIIDIIII",
                         'D', new ItemStack(resource, 1, 24),
                         'E', new ItemStack(dense, 1, 0),
-                        'I', new ItemStack(LudicrousItems.resource, 1, 6));
+                        'I', new ItemStack(ModItems.resource, 1, 6));
             }
             catch (Throwable e){
                 Lumberjack.log(Level.INFO, "Avaritia couldn't figure out how channels work.");

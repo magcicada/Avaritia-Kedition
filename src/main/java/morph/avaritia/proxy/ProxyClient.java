@@ -15,7 +15,7 @@ import morph.avaritia.entity.EntityGapingVoid;
 import morph.avaritia.entity.EntityHeavenArrow;
 import morph.avaritia.entity.EntityHeavenSubArrow;
 import morph.avaritia.init.AvaritiaTextures;
-import morph.avaritia.init.LudicrousItems;
+import morph.avaritia.init.ModItems;
 import morph.avaritia.item.ItemMatterCluster;
 import morph.avaritia.network.ClientPacketHandler;
 import morph.avaritia.network.NetworkDispatcher;
@@ -77,8 +77,8 @@ public class ProxyClient extends Proxy {
         {
             ModelResourceLocation pickaxe = new ModelResourceLocation(tools, "infinity_pickaxe=pickaxe");
             ModelResourceLocation hammer = new ModelResourceLocation(tools, "infinity_pickaxe=hammer");
-            ModelLoader.registerItemVariants(LudicrousItems.infinity_pickaxe, pickaxe, hammer);
-            ModelLoader.setCustomMeshDefinition(LudicrousItems.infinity_pickaxe, stack -> {
+            ModelLoader.registerItemVariants(ModItems.infinity_pickaxe, pickaxe, hammer);
+            ModelLoader.setCustomMeshDefinition(ModItems.infinity_pickaxe, stack -> {
                 if (stack.hasTagCompound()) {
                     if (ItemNBTUtils.getBoolean(stack, "hammer")) {
                         return hammer;
@@ -91,8 +91,8 @@ public class ProxyClient extends Proxy {
         {
             ModelResourceLocation shovel = new ModelResourceLocation(tools, "infinity_shovel=shovel");
             ModelResourceLocation destroyer = new ModelResourceLocation(tools, "infinity_shovel=destroyer");
-            ModelLoader.registerItemVariants(LudicrousItems.infinity_shovel, shovel, destroyer);
-            ModelLoader.setCustomMeshDefinition(LudicrousItems.infinity_shovel, stack -> {
+            ModelLoader.registerItemVariants(ModItems.infinity_shovel, shovel, destroyer);
+            ModelLoader.setCustomMeshDefinition(ModItems.infinity_shovel, stack -> {
                 if (stack.hasTagCompound()) {
                     if (ItemNBTUtils.getBoolean(stack, "destroyer")) {
                         return destroyer;
@@ -104,63 +104,63 @@ public class ProxyClient extends Proxy {
 
         {
             ModelResourceLocation axe = new ModelResourceLocation(tools, "type=infinity_axe");
-            ModelLoader.registerItemVariants(LudicrousItems.infinity_axe, axe);
-            ModelLoader.setCustomMeshDefinition(LudicrousItems.infinity_axe, (ItemStack stack) -> axe);
+            ModelLoader.registerItemVariants(ModItems.infinity_axe, axe);
+            ModelLoader.setCustomMeshDefinition(ModItems.infinity_axe, (ItemStack stack) -> axe);
         }
 
         {
             ModelResourceLocation hoe = new ModelResourceLocation(tools, "type=infinity_hoe");
-            ModelLoader.registerItemVariants(LudicrousItems.infinity_axe, hoe);
-            ModelLoader.setCustomMeshDefinition(LudicrousItems.infinity_hoe, (ItemStack stack) -> hoe);
+            ModelLoader.registerItemVariants(ModItems.infinity_axe, hoe);
+            ModelLoader.setCustomMeshDefinition(ModItems.infinity_hoe, (ItemStack stack) -> hoe);
         }
 
         {
             ModelResourceLocation helmet = new ModelResourceLocation(tools, "armor=helmet");
-            ModelLoader.registerItemVariants(LudicrousItems.infinity_helmet, helmet);
-            ModelLoader.setCustomMeshDefinition(LudicrousItems.infinity_helmet, (ItemStack stack) -> helmet);
+            ModelLoader.registerItemVariants(ModItems.infinity_helmet, helmet);
+            ModelLoader.setCustomMeshDefinition(ModItems.infinity_helmet, (ItemStack stack) -> helmet);
         }
 
         {
             ModelResourceLocation chestplate = new ModelResourceLocation(tools, "armor=chestplate");
-            ModelLoader.registerItemVariants(LudicrousItems.infinity_chestplate, chestplate);
-            ModelLoader.setCustomMeshDefinition(LudicrousItems.infinity_chestplate, (ItemStack stack) -> chestplate);
+            ModelLoader.registerItemVariants(ModItems.infinity_chestplate, chestplate);
+            ModelLoader.setCustomMeshDefinition(ModItems.infinity_chestplate, (ItemStack stack) -> chestplate);
         }
 
         {
             ModelResourceLocation legs = new ModelResourceLocation(tools, "armor=legs");
-            ModelLoader.registerItemVariants(LudicrousItems.infinity_pants, legs);
-            ModelLoader.setCustomMeshDefinition(LudicrousItems.infinity_pants, (ItemStack stack) -> legs);
+            ModelLoader.registerItemVariants(ModItems.infinity_pants, legs);
+            ModelLoader.setCustomMeshDefinition(ModItems.infinity_pants, (ItemStack stack) -> legs);
         }
 
         {
             ModelResourceLocation boots = new ModelResourceLocation(tools, "armor=boots");
-            ModelLoader.registerItemVariants(LudicrousItems.infinity_boots, boots);
-            ModelLoader.setCustomMeshDefinition(LudicrousItems.infinity_boots, (ItemStack stack) -> boots);
+            ModelLoader.registerItemVariants(ModItems.infinity_boots, boots);
+            ModelLoader.setCustomMeshDefinition(ModItems.infinity_boots, (ItemStack stack) -> boots);
         }
 
         {
             ModelResourceLocation sword = new ModelResourceLocation(tools, "type=skull_sword");
-            ModelLoader.registerItemVariants(LudicrousItems.skull_sword, sword);
-            ModelLoader.setCustomMeshDefinition(LudicrousItems.skull_sword, (ItemStack stack) -> sword);
+            ModelLoader.registerItemVariants(ModItems.skull_sword, sword);
+            ModelLoader.setCustomMeshDefinition(ModItems.skull_sword, (ItemStack stack) -> sword);
         }
 
         {
             ModelResourceLocation stew = new ModelResourceLocation(resource, "type=ultimate_stew");
-            ModelLoader.registerItemVariants(LudicrousItems.ultimate_stew, stew);
-            ModelLoader.setCustomMeshDefinition(LudicrousItems.ultimate_stew, (ItemStack stack) -> stew);
+            ModelLoader.registerItemVariants(ModItems.ultimate_stew, stew);
+            ModelLoader.setCustomMeshDefinition(ModItems.ultimate_stew, (ItemStack stack) -> stew);
         }
 
         {
             ModelResourceLocation meatballs = new ModelResourceLocation(resource, "type=cosmic_meatballs");
-            ModelLoader.registerItemVariants(LudicrousItems.cosmic_meatballs, meatballs);
-            ModelLoader.setCustomMeshDefinition(LudicrousItems.cosmic_meatballs, (ItemStack stack) -> meatballs);
+            ModelLoader.registerItemVariants(ModItems.cosmic_meatballs, meatballs);
+            ModelLoader.setCustomMeshDefinition(ModItems.cosmic_meatballs, (ItemStack stack) -> meatballs);
         }
 
         {
             ModelResourceLocation empty = new ModelResourceLocation(resource, "matter_cluster=empty");
             ModelResourceLocation full = new ModelResourceLocation(resource, "matter_cluster=full");
-            ModelLoader.registerItemVariants(LudicrousItems.matter_cluster, empty, full);
-            ModelLoader.setCustomMeshDefinition(LudicrousItems.matter_cluster, (ItemStack stack) -> {
+            ModelLoader.registerItemVariants(ModItems.matter_cluster, empty, full);
+            ModelLoader.setCustomMeshDefinition(ModItems.matter_cluster, (ItemStack stack) -> {
                 if (ItemMatterCluster.getClusterSize(stack) == ItemMatterCluster.CAPACITY) {
                     return full;
                 }
@@ -186,7 +186,7 @@ public class ProxyClient extends Proxy {
         super.postInit(event);
         CompatClient.lateComprettify();
         ItemColors itemColors = Minecraft.getMinecraft().getItemColors();
-        itemColors.registerItemColorHandler((stack, tintIndex) -> SINGULARITY_COLOURS[tintIndex ^ 1][stack.getItemDamage()], LudicrousItems.singularity);
+        itemColors.registerItemColorHandler((stack, tintIndex) -> SINGULARITY_COLOURS[tintIndex ^ 1][stack.getItemDamage()], ModItems.singularity);
 
         RenderManager manager = Minecraft.getMinecraft().getRenderManager();
 
@@ -203,7 +203,7 @@ public class ProxyClient extends Proxy {
     }
 
     private void registerRenderers() {
-        RenderingRegistry.registerEntityRenderingHandler(EntityEndestPearl.class, manager -> new RenderSnowball<>(manager, LudicrousItems.endest_pearl, Minecraft.getMinecraft().getRenderItem()));
+        RenderingRegistry.registerEntityRenderingHandler(EntityEndestPearl.class, manager -> new RenderSnowball<>(manager, ModItems.endest_pearl, Minecraft.getMinecraft().getRenderItem()));
         RenderingRegistry.registerEntityRenderingHandler(EntityGapingVoid.class, RenderGapingVoid::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityHeavenArrow.class, RenderHeavenArrow::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityHeavenSubArrow.class, RenderHeavenArrow::new);

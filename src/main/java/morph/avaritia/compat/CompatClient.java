@@ -10,8 +10,8 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import vazkii.botania.api.BotaniaAPIClient;
 
-import static morph.avaritia.init.LudicrousBlocks.gaia_block;
-import static morph.avaritia.init.LudicrousBlocks.infinitato;
+import static morph.avaritia.init.ModBlocks.gaia_block;
+import static morph.avaritia.init.ModBlocks.infinitato;
 
 public class CompatClient {
 

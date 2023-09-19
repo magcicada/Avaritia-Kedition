@@ -10,7 +10,7 @@ import codechicken.lib.raytracer.RayTracer;
 import morph.avaritia.Avaritia;
 import morph.avaritia.entity.EntityImmortalItem;
 import morph.avaritia.handler.AvaritiaEventHandler;
-import morph.avaritia.init.LudicrousItems;
+import morph.avaritia.init.ModItems;
 import morph.avaritia.util.ToolHelper;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -52,7 +52,7 @@ public class ItemAxeInfinity extends ItemAxe {
 
     @Override
     public EnumRarity getRarity(ItemStack stack) {
-        return LudicrousItems.COSMIC_RARITY;
+        return ModItems.COSMIC_RARITY;
     }
 
     @Override

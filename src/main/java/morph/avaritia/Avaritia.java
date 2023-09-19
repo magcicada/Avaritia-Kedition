@@ -4,8 +4,8 @@ import codechicken.lib.CodeChickenLib;
 import codechicken.lib.gui.SimpleCreativeTab;
 import morph.avaritia.compat.Compat;
 import morph.avaritia.init.FoodRecipes;
-import morph.avaritia.init.LudicrousBlocks;
-import morph.avaritia.init.LudicrousItems;
+import morph.avaritia.init.ModBlocks;
+import morph.avaritia.init.ModItems;
 import morph.avaritia.proxy.Proxy;
 import morph.avaritia.recipe.AvaritiaRecipeManager;
 import morph.avaritia.util.CompressorBalanceCalculator;
@@ -51,13 +51,13 @@ public class Avaritia {
         Compat.census();
         proxy.preInit(event);
         OreDictionary.registerOre("blockWool", new ItemStack(Blocks.WOOL, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("blockCrystalMatrix", new ItemStack(LudicrousBlocks.resource, 1, 2));
-        OreDictionary.registerOre("blockCosmicNeutronium", new ItemStack(LudicrousBlocks.resource, 1, 0));
-        OreDictionary.registerOre("blockInfinity", new ItemStack(LudicrousBlocks.resource, 1, 1));
-        OreDictionary.registerOre("ingotCrystalMatrix", LudicrousItems.crystal_matrix_ingot);
-        OreDictionary.registerOre("ingotCosmicNeutronium", LudicrousItems.neutronium_ingot);
-        OreDictionary.registerOre("ingotInfinity", LudicrousItems.infinity_ingot);
-        OreDictionary.registerOre("nuggetCosmicNeutronium", LudicrousItems.neutron_nugget);
+        OreDictionary.registerOre("blockCrystalMatrix", new ItemStack(ModBlocks.resource, 1, 2));
+        OreDictionary.registerOre("blockCosmicNeutronium", new ItemStack(ModBlocks.resource, 1, 0));
+        OreDictionary.registerOre("blockInfinity", new ItemStack(ModBlocks.resource, 1, 1));
+        OreDictionary.registerOre("ingotCrystalMatrix", ModItems.crystal_matrix_ingot);
+        OreDictionary.registerOre("ingotCosmicNeutronium", ModItems.neutronium_ingot);
+        OreDictionary.registerOre("ingotInfinity", ModItems.infinity_ingot);
+        OreDictionary.registerOre("nuggetCosmicNeutronium", ModItems.neutron_nugget);
     }
 
     @Mod.EventHandler

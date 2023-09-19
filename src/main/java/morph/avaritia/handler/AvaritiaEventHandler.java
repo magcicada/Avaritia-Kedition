@@ -1,6 +1,6 @@
 package morph.avaritia.handler;
 
-import morph.avaritia.init.LudicrousItems;
+import morph.avaritia.init.ModItems;
 import morph.avaritia.item.ItemArmorInfinity;
 import morph.avaritia.item.ItemFracturedOre;
 import morph.avaritia.item.ItemMatterCluster;
@@ -135,10 +135,10 @@ public class AvaritiaEventHandler {
         IBlockState state = world.getBlockState(pos);
         Block block = state.getBlock();
         int meta = block.getMetaFromState(state);
-        if (state.getBlockHardness(world, event.getPos()) <= -1 && event.getItemStack().getItem() == LudicrousItems.infinity_pickaxe && (state.getMaterial() == Material.ROCK || state.getMaterial() == Material.IRON)) {
+        if (state.getBlockHardness(world, event.getPos()) <= -1 && event.getItemStack().getItem() == ModItems.infinity_pickaxe && (state.getMaterial() == Material.ROCK || state.getMaterial() == Material.IRON)) {
 
             if (event.getItemStack().getTagCompound() != null && event.getItemStack().getTagCompound().getBoolean("hammer")) {
-                LudicrousItems.infinity_pickaxe.onBlockStartBreak(event.getEntityPlayer().getHeldItem(EnumHand.MAIN_HAND), event.getPos(), event.getEntityPlayer());
+                ModItems.infinity_pickaxe.onBlockStartBreak(event.getEntityPlayer().getHeldItem(EnumHand.MAIN_HAND), event.getPos(), event.getEntityPlayer());
             } else {//TODO, FIXME, HELP!
                 //if (block.quantityDropped(randy) == 0) {
                 //    ItemStack drop = block.getPickBlock(state, ToolHelper.raytraceFromEntity(event.getWorld(), event.getEntityPlayer(), true, 10), event.getWorld(), event.getPos(), event.getEntityPlayer());
@@ -162,7 +162,7 @@ public class AvaritiaEventHandler {
         }
         ItemStack mainHand = event.getHarvester().getHeldItem(EnumHand.MAIN_HAND);
 
-        if (!mainHand.isEmpty() && mainHand.getItem() == LudicrousItems.infinity_pickaxe) {
+        if (!mainHand.isEmpty() && mainHand.getItem() == ModItems.infinity_pickaxe) {
             applyLuck(event, 4);
         }
     }
@@ -180,7 +180,7 @@ public class AvaritiaEventHandler {
                     drop.setCount(Math.min(drop.getCount() * multiplier, drop.getMaxStackSize()));
                 } else if (ConfigHandler.fracturedOres && drop.getItem() == Item.getItemFromBlock(event.getState().getBlock())) {
                     //kk, we are an ore block, Lets test for oreDict and add fractured ores.
-                    ItemFracturedOre fracturedOre = LudicrousItems.fractured_ore;
+                    ItemFracturedOre fracturedOre = ModItems.fractured_ore;
                     int[] iDs = OreDictionary.getOreIDs(drop);
                     for (int id : iDs) {
                         String oreName = OreDictionary.getOreName(id);
@@ -217,7 +217,7 @@ public class AvaritiaEventHandler {
             return;
         }
         EntityPlayer player = (EntityPlayer) event.getEntityLiving();
-        if (!player.getHeldItemMainhand().isEmpty() && player.getHeldItemMainhand().getItem() == LudicrousItems.infinity_sword && player.isHandActive()) {//TODO Blocking? Maybe add a shield?
+        if (!player.getHeldItemMainhand().isEmpty() && player.getHeldItemMainhand().getItem() == ModItems.infinity_sword && player.isHandActive()) {//TODO Blocking? Maybe add a shield?
             event.setCanceled(true);
         }
         if (isInfinite(player) && !event.getSource().damageType.equals("infinity")) {
@@ -243,7 +243,7 @@ public class AvaritiaEventHandler {
     public void onLivingDrops(LivingDropsEvent event) {
         if (event.isRecentlyHit() && event.getEntityLiving() instanceof EntitySkeleton && event.getSource().getTrueSource() instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer) event.getSource().getTrueSource();
-            if (!player.getHeldItem(EnumHand.MAIN_HAND).isEmpty() && player.getHeldItem(EnumHand.MAIN_HAND).getItem() == LudicrousItems.skull_sword) {
+            if (!player.getHeldItem(EnumHand.MAIN_HAND).isEmpty() && player.getHeldItem(EnumHand.MAIN_HAND).getItem() == ModItems.skull_sword) {
                 // ok, we need to drop a skull then.
                 if (event.getDrops().isEmpty()) {
                     addDrop(event, new ItemStack(Items.SKULL, 1, 1));
@@ -276,7 +276,7 @@ public class AvaritiaEventHandler {
     public void diggity(BreakSpeed event) {
         if (!event.getEntityLiving().getHeldItem(EnumHand.MAIN_HAND).isEmpty()) {
             ItemStack held = event.getEntityLiving().getHeldItem(EnumHand.MAIN_HAND);
-            if (held.getItem() == LudicrousItems.infinity_pickaxe || held.getItem() == LudicrousItems.infinity_shovel) {
+            if (held.getItem() == ModItems.infinity_pickaxe || held.getItem() == ModItems.infinity_shovel) {
                 if (!event.getEntityLiving().onGround) {
                     event.setNewSpeed(event.getNewSpeed() * 5);
                 }
@@ -296,7 +296,7 @@ public class AvaritiaEventHandler {
     public void canHarvest(PlayerEvent.HarvestCheck event) {
         if (!event.getEntityLiving().getHeldItem(EnumHand.MAIN_HAND).isEmpty()) {
             ItemStack held = event.getEntityLiving().getHeldItem(EnumHand.MAIN_HAND);
-            if (held.getItem() == LudicrousItems.infinity_shovel && event.getTargetBlock().getMaterial() == Material.ROCK) {
+            if (held.getItem() == ModItems.infinity_shovel && event.getTargetBlock().getMaterial() == Material.ROCK) {
                 if (held.getTagCompound() != null && held.getTagCompound().getBoolean("destroyer") && isGarbageBlock(event.getTargetBlock().getBlock())) {
                     event.setResult(Event.Result.ALLOW);
                 }
@@ -334,7 +334,7 @@ public class AvaritiaEventHandler {
 
     @SubscribeEvent
     public void clusterClustererererer(EntityItemPickupEvent event) {
-        if (event.getEntityPlayer() != null && event.getItem().getItem().getItem() == LudicrousItems.matter_cluster) {
+        if (event.getEntityPlayer() != null && event.getItem().getItem().getItem() == ModItems.matter_cluster) {
             ItemStack stack = event.getItem().getItem();
             EntityPlayer player = event.getEntityPlayer();
 
@@ -342,7 +342,7 @@ public class AvaritiaEventHandler {
                 if (stack.isEmpty()) {
                     break;
                 }
-                if (slot.getItem() == LudicrousItems.matter_cluster) {
+                if (slot.getItem() == ModItems.matter_cluster) {
                     ItemMatterCluster.mergeClusters(stack, slot);
                 }
             }

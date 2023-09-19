@@ -2,7 +2,7 @@ package morph.avaritia.compat.botania;
 
 import morph.avaritia.Avaritia;
 import morph.avaritia.compat.Compat;
-import morph.avaritia.init.LudicrousItems;
+import morph.avaritia.init.ModItems;
 import morph.avaritia.recipe.ExtremeCraftingManager;
 import morph.avaritia.recipe.extreme.ExtremeShapedRecipe;
 import net.minecraft.block.Block;
@@ -15,7 +15,7 @@ import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.recipe.RecipeRuneAltar;
 import vazkii.botania.common.block.ModBlocks;
 
-import static morph.avaritia.init.LudicrousBlocks.*;
+import static morph.avaritia.init.ModBlocks.*;
 
 public class Tsundere {
 
@@ -54,10 +54,10 @@ public class Tsundere {
                 "nnnnNnnnn",
                 " nn N nn ",
                 "    N    ",
-                'I', new ItemStack(LudicrousItems.resource, 1, 6),
-                'X', new ItemStack(LudicrousItems.resource, 1, 5),
-                'N', new ItemStack(LudicrousItems.resource, 1, 4),
-                'n', new ItemStack(LudicrousItems.resource, 1, 3));
+                'I', new ItemStack(ModItems.resource, 1, 6),
+                'X', new ItemStack(ModItems.resource, 1, 5),
+                'N', new ItemStack(ModItems.resource, 1, 4),
+                'n', new ItemStack(ModItems.resource, 1, 3));
 
         ItemStack chicken = getFlower("soarleander");
         BotaniaAPI.registerRuneAltarRecipe(
@@ -94,7 +94,7 @@ public class Tsundere {
                 "IIIIIIIII",
                 "IIIIIIIII",
                 'I', new ItemStack(potato),
-                'X', new ItemStack(LudicrousItems.resource, 1, 5),
+                'X', new ItemStack(ModItems.resource, 1, 5),
                 'S', new ItemStack(Items.DIAMOND));
 
         BlockInfinitato.lexiconEntry = new LudicrousLexicon("infinitato", BotaniaAPI.categoryMisc);
@@ -111,7 +111,7 @@ public class Tsundere {
                         "IIIIIIIII",
                         "IIIIIIIII",
                         'I', new ItemStack(potato),
-                        'X', new ItemStack(LudicrousItems.resource, 1, 5),
+                        'X', new ItemStack(ModItems.resource, 1, 5),
                         'S', new ItemStack(Items.DIAMOND))))
         ).setIcon(new ItemStack(infinitato));
     }

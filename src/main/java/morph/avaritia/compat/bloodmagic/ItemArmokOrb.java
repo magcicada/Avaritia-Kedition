@@ -13,7 +13,7 @@ import WayofTime.bloodmagic.util.helper.TextHelper;
 import jline.internal.Nullable;
 import morph.avaritia.Avaritia;
 import morph.avaritia.api.registration.IModelRegister;
-import morph.avaritia.init.LudicrousItems;
+import morph.avaritia.init.ModItems;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
@@ -132,7 +132,7 @@ public class ItemArmokOrb extends ItemBindableBase implements IBloodOrb, IModelR
     @Override
     public void registerModels() {
         ModelResourceLocation orb = new ModelResourceLocation("avaritia:resource", "type=armok_orb");
-        ModelLoader.registerItemVariants(LudicrousItems.armok_orb, orb);
-        ModelLoader.setCustomMeshDefinition(LudicrousItems.armok_orb, (ItemStack stack) -> orb);
+        ModelLoader.registerItemVariants(ModItems.armok_orb, orb);
+        ModelLoader.setCustomMeshDefinition(ModItems.armok_orb, (ItemStack stack) -> orb);
     }
 }
