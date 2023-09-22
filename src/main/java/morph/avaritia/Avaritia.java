@@ -34,7 +34,7 @@ public class Avaritia {
 
     public static final String MOD_ID = "avaritia";
     public static final String MOD_NAME = "Avaritia";
-    public static final String MOD_VERSION = "Kedition - 1.0";
+    public static final String MOD_VERSION = "3.4.0";
     public static final String DEPENDENCIES = "" + CodeChickenLib.MOD_VERSION_DEP;
 
     public static CreativeTabs tab = new SimpleCreativeTab(MOD_ID, "avaritia:resource", 5);
