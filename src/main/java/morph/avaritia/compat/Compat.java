@@ -9,29 +9,19 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class Compat {
 
-	public static boolean ae2 = false;
-	public static boolean thaumic = false;
-	public static boolean botan = false;
-	public static boolean blood = false;;
-	public static boolean tweak = false;
-	public static boolean forestry = false;
-	public static boolean te = false;
-
-	public static void census() {
-		tweak = Loader.isModLoaded("crafftteaker");
-		ae2 = Loader.isModLoaded("appliedenergistics2") && ConfigHandler.ae2;
-		thaumic = Loader.isModLoaded("thaumcraft") && ConfigHandler.thaumic;
-		//exu = Loader.isModLoaded("ExtraUtilities") && Config.exu;
-		//ic2 = Loader.isModLoaded("IC2") && Config.ic2;
-		botan = Loader.isModLoaded("botania") && ConfigHandler.botan;
-		blood = Loader.isModLoaded("bloodmagic") && ConfigHandler.blood;
-		//bigReactors = Loader.isModLoaded("BigReactors") && Config.bigReactors;
-		//pe = Loader.isModLoaded("ProjectE") && Config.pe;
-		//mfr = Loader.isModLoaded("MineFactoryReloaded") && Config.mfr;
-		//am2 = Loader.isModLoaded("arsmagica2") && Config.am2;
-		forestry = Loader.isModLoaded("forestry") && ConfigHandler.forestry;
-		te = Loader.isModLoaded("thermalexpansion") && ConfigHandler.te;
-	}
+	public static boolean tweak = Loader.isModLoaded("crafftteaker");
+	public static boolean ae2 = Loader.isModLoaded("appliedenergistics2") && ConfigHandler.ae2;
+	public static boolean thaumic = Loader.isModLoaded("thaumcraft") && ConfigHandler.thaumic;
+	//exu = Loader.isModLoaded("ExtraUtilities") && Config.exu;
+	//ic2 = Loader.isModLoaded("IC2") && Config.ic2;
+	public static boolean botan = Loader.isModLoaded("botania") && ConfigHandler.botan;
+	public static boolean blood = Loader.isModLoaded("bloodmagic") && ConfigHandler.blood;
+	//bigReactors = Loader.isModLoaded("BigReactors") && Config.bigReactors;
+	//pe = Loader.isModLoaded("ProjectE") && Config.pe;
+	//mfr = Loader.isModLoaded("MineFactoryReloaded") && Config.mfr;
+	//am2 = Loader.isModLoaded("arsmagica2") && Config.am2;
+	public static boolean forestry = Loader.isModLoaded("forestry") && ConfigHandler.forestry;
+	public static boolean te = Loader.isModLoaded("thermalexpansion") && ConfigHandler.te;
 	public static void compatifyPreInit(){
 	//		if(Config.craftingOnly)
 	//			return;

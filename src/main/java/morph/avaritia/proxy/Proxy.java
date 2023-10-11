@@ -106,7 +106,7 @@ public class Proxy {
             } catch(Throwable e){
                 Lumberjack.log(Level.INFO, "Avaritia is wondering where all the dayblooms went.");
                 e.printStackTrace();
-                Compat.thaumic = false;
+                Compat.botan = false;
             }
         }
 

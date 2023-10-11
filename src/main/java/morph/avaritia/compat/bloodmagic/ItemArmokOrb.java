@@ -63,8 +63,6 @@ public class ItemArmokOrb extends ItemBindableBase implements IBloodOrb, IModelR
         if (world == null)
             return super.onItemRightClick(world, player, hand);
 
-        world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.BLOCK_FIRE_EXTINGUISH, SoundCategory.BLOCKS, 0.5F, 2.6F + (world.rand.nextFloat() - world.rand.nextFloat()) * 0.8F);
-
         if (PlayerHelper.isFakePlayer(player))
             return super.onItemRightClick(world, player, hand);
 
@@ -88,7 +86,7 @@ public class ItemArmokOrb extends ItemBindableBase implements IBloodOrb, IModelR
 
     @Override
     public EnumRarity getRarity(ItemStack itemstack) {
-        return EnumRarity.EPIC;
+        return ModItems.COSMIC_RARITY;
     }
 
     @Override

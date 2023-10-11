@@ -27,11 +27,8 @@ public class ConfigHandler {
     public static boolean lead = true;
     public static boolean steel = true;
     public static boolean nickel = true;
-    public static boolean fluxed = true;
     public static boolean enderium = true;
     public static boolean darkSteel = true;
-    public static boolean platinum = true;
-    public static boolean iridium = true;
     public static boolean clay = true;
     public static int modifier = 0;
     public static int multiplier = 0;
